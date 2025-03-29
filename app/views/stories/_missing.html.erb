@@ -1,5 +1,5 @@
 <%# locals: (story:, moderation: nil) -%>
-<div class="box"><p>
+<p>
   <% if !@user %>
     <%
       # Logged-out visitors don't get details so we don't make a convenient
@@ -16,4 +16,4 @@
   <% else %>
     Story was removed by submitter<% if @user %> <%= link_to story.user.username, user_path(story.user) %><% end %>.
   <% end %>
-</p></div>
+</p>
